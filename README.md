@@ -5,11 +5,11 @@ O AllFor Games é um chatbox que surgiu com nescessidade de responder algumas d�
 Apartir dessas dúvidas desenvolvemos esse chatbox.
 
 # Pessoas Desenvolvedoras do Projeto:
-Aron
-Jaymerson
-Jefferson
-Joel
-Lucas
+Aron,
+Jaymerson,
+Jefferson,
+Joel,
+Lucas.
 
 # Status do Projeto:
 Finalizado
