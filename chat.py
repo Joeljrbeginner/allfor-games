@@ -1,76 +1,70 @@
-while True:                                         
-    print('[ 1 ] Dúvidas sobre codewars\n'
-          '[ 2 ] Dúvidas sobre discord\n'
-          '[ 3 ] Dúvidas sobre as aulas\n'
-          '[ 4 ] Sair')
+def intro_duvida(opcoes):
+    while True:
+        print(*opcoes, sep='\n')
+        duvida = input('\nDigite um número: ')
+        if duvida not in ['1', '2', '3', '4']:
+            print('ERRO! Número inválido, tente novamente entre 1 a 4')
+        else:
+            return duvida
 
-    assunto = input('Digite um número: ')[0]        
-    if assunto == '4':              
+def intro_consulta(opcoes):
+    while True:
+        print(*opcoes, sep='\n')
+        consulta = input('\nDigite um número: ')
+        if consulta not in ['1', '2', '3', '4', '5']:
+            print('ERRO! Número inválido, tente novamente entre 1 a 5')
+        else:
+            return consulta
+
+def saida_volta():
+    while True:
+        print('\n 1_ Voltar\n 2_ Voltar ao início \n 3_ Sair')
+        saida = input('\nDigite um número: ')
+        if saida == '1':
+            break
+        elif saida == '2':
+            return True
+        elif saida == '3':
+            return '4'
+
+#// PRINCIPAL
+voltar_inicio = False
+consulta = ''
+duvida = ''
+
+while True:
+    if duvida == '4' or consulta == '5':
         break
-    if assunto not in '1234':        
-        print('ERRO! Número invalido, tente novamente!')
 
-    if assunto == '1':              
-        while True:                 
-            print('[ 1 ] link de acesso?\n'
-                  '[ 2 ] Pontuação esperada?\n'
-                  '[ 3 ] Quais tecnologias treinar?\n'
-                  '[ 4 ] Retornar ao início')
+    opcoes = ['1_ Dúvidas sobre Codewars',
+              '2_ Dúvidas sobre Discord',
+              '3_ Dúvidas sobre as aulas',
+              '4_ Sair']
 
-            pergunta = input('Digite um número: ')[0]       
-            if pergunta == '4':                             
-                break
-            if pergunta not in '1234':                      
-                print('ERRO! Número invalido, tente novamente!')
+    duvida = intro_duvida(opcoes)
+    if duvida == '4' or consulta == '5':
+        break
 
-            if int(pergunta) == 1:                          
-                print('Link de acesso do Qualified é: https://codewars.coom')
-            elif int(pergunta) == 2:                        
-                print('Resposta: Assunto 1, pergunta 2')
-            elif int(pergunta) == 3:                       
-                print('Resposta: Assunto 1, pergunta 3') 
-    
-    elif assunto == '2':
+    if duvida == '1':
+        opcoes = ['1_ link de acesso?',
+                  '2_ Classificação?',
+                  '3_ Quais tecnologias treinar?',
+                  '4_ Retornar ao início',
+                  '5_ Sair']
+
         while True:
-            print('[ 1 ] Assunto 2, pergunta 1\n'
-                  '[ 2 ] Assunto 2, pergunta 2\n'
-                  '[ 3 ] Assunto 2, pergunta 3\n'
-                  '[ 4 ] Retornar ao início')
-            
-            pergunta = input('Digite um número: ')[0]
-            if pergunta == '4':
-                pergunta = ''
+            consulta = intro_consulta(opcoes)
+            if consulta in ['4', '5']:
                 break
-            if pergunta not in '1234':
-                print('ERRO! Número invalido, tente novamente!')
+            if consulta == '1':
+                print('Resposta para "link de acesso?"')
+            elif consulta == '2':
+                print('Resposta para "Classificação?"')
+            elif consulta == '3':
+                print('Resposta para "Quais tecnologias treinar?"')
 
-            if int(pergunta) == 1:
-                print('Resposta: Assunto 2, pergunta 1')
-            elif int(pergunta) == 2:
-                print('Resposta: Assunto 2, pergunta 2')
-            elif int(pergunta) == 3:
-                print('Resposta: Assunto 2, pergunta 3')
-                    
-    elif assunto == '3':
-        while True:
-            print('[ 1 ] Assunto 3, pergunta 1\n'
-                  '[ 2 ] Assunto 3, pergunta 2\n'
-                  '[ 3 ] Assunto 3, pergunta 3\n'
-                  '[ 4 ] Retornar ao início')
-
-            pergunta = input('Digite um número: ')[0]
-            if pergunta == '4':
-                pergunta = ''
+            voltar_inicio = saida_volta()
+            if voltar_inicio:
                 break
-            if pergunta not in '1234':
-                print('ERRO! Número invalido, tente novamente!')
-
-
-            if int(pergunta) == 1:
-                print('Resposta: Assunto 3, pergunta 1')
-            elif int(pergunta) == 2:
-                print('Resposta: Assunto 3, pergunta 2')
-            elif int(pergunta) == 3:
-                print('Resposta: Assunto 3, pergunta 3')
                     
 print('Obrigado, volte sempre!!!')
