@@ -26,9 +26,9 @@ while True:
             if int(pergunta) == 1:                          
                 print('Link de acesso do Qualified é: https://codewars.coom')
             elif int(pergunta) == 2:                        
-                print('Assunto 1, pergunta 2')
+                print('Resposta: Assunto 1, pergunta 2')
             elif int(pergunta) == 3:                       
-                print('Assunto 1, pergunta 2') 
+                print('Resposta: Assunto 1, pergunta 3') 
     
     elif assunto == '2':
         while True:
@@ -54,8 +54,8 @@ while True:
     elif assunto == '3':
         while True:
             print('[ 1 ] Assunto 3, pergunta 1\n'
-                  '[ 2 ] Assunto 3, pergunta 1\n'
-                  '[ 3 ] Assunto 3, pergunta 1\n'
+                  '[ 2 ] Assunto 3, pergunta 2\n'
+                  '[ 3 ] Assunto 3, pergunta 3\n'
                   '[ 4 ] Retornar ao início')
 
             pergunta = input('Digite um número: ')[0]
@@ -73,4 +73,4 @@ while True:
             elif int(pergunta) == 3:
                 print('Resposta: Assunto 3, pergunta 3')
                     
-print('Obrigado, volte sempre!!!')
+print('Obrigado, volte sempre!!!')
