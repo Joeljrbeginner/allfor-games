@@ -1,244 +1,76 @@
-while True:                                                         #Enquanto verdade, repete para sempre
-    print('[ 1 ] 0\n'
-          '[ 2 ] 0\n'
-          '[ 3 ] 0\n'
+while True:                                         
+    print('[ 1 ] Dúvidas sobre codewars\n'
+          '[ 2 ] Dúvidas sobre discord\n'
+          '[ 3 ] Dúvidas sobre as aulas\n'
           '[ 4 ] Sair')
 
-    resposta = input('Digite um número: ')[0]                       #Atribui um valor a 'resposta'
-    if resposta == '4':                                             #Enterrompe o loop se 'resposta' for igual a 4
+    assunto = input('Digite um número: ')[0]        
+    if assunto == '4':              
         break
-    if resposta not in '1234':                                      #se 'resposta' não estiver dentro de '1234' então imprima 
+    if assunto not in '1234':        
         print('ERRO! Número invalido, tente novamente!')
 
-    if resposta == '1':                                             #se 'resposta' for igual a '1' então
-        while True:                                                 #loop repita sempre
-            print('[ 1 ] 1\n'
-                  '[ 2 ] 1\n'
-                  '[ 3 ] 1\n'
-                  '[ 4 ] Sair')
+    if assunto == '1':              
+        while True:                 
+            print('[ 1 ] link de acesso?\n'
+                  '[ 2 ] Pontuação esperada?\n'
+                  '[ 3 ] Quais tecnologias treinar?\n'
+                  '[ 4 ] Retornar ao início')
 
-            resposta = input('Digite um número: ')[0]               #Atribui um valor a 'resposta'
-            if resposta == '4':                                     #Enterrompe o loop se 'resposta' for igual a 4
-                resposta = ''                                       #Limpra a vareavel pra não interferir quando volta pro loop, linha: 2
+            pergunta = input('Digite um número: ')[0]       
+            if pergunta == '4':                             
                 break
-            if resposta not in '1234':                              #se 'resposta' não estiver dentro de '1234' então imprima 
+            if pergunta not in '1234':                      
                 print('ERRO! Número invalido, tente novamente!')
 
-            if resposta == '1':                                     #se 'resposta' for igual a '1' então
-                while True:                                         #lopp repita sempre
-                    print('[ 1 ] 1.1\n'
-                          '[ 2 ] 1.1\n'
-                          '[ 3 ] 1.1\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]       #Atribui um valor a 'resposta'
-                    if resposta == '4':                             #Enterrompe o loop se 'resposta' for igual a 4
-                        resposta = ''                               #Limpra a vareavel pra não interferir quando volta pro loop, linha: 14
-                        break                              
-                    if resposta not in '1234':                      #se 'resposta' não estiver dentro de '1234' então imprima
-                        print('ERRO! Número invalido, tente novamente')  
-
-                    if int(resposta) == 1:                          #se o int(resposta) for igual a '1' então imprima
-                        print('1.1.1')
-                    elif int(resposta) == 2:                        #se o int(resposta) for igual a '2' então imprima
-                        print('1.1.2')
-                    elif int(resposta) == 3:                        #se o int(resposta) for igual a '3' então imprima
-                        print('1.1.3')
-
-            elif resposta == '2':                                     #se 'resposta' for igual a '1' então
-                while True:                                           #loop repita sempre
-                    print('[ 1 ] 1.2\n'
-                          '[ 2 ] 1.2\n'
-                          '[ 3 ] 1.2\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]       #Atribui um valor a 'resposta'
-                    if resposta == '4':                             #Enterrompe o loop se 'resposta' for igual a 4
-                        resposta = ''                               #Limpra a vareavel pra não interferir quando volta pro loop, linha: 14
-                        break
-                    if resposta not in '1234':                      #se 'resposta' não estiver dentro de '1234' então imprima ERRO                     
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:                          #se o int(resposta) for igual a '1' então imprima
-                        print('1.2.1')
-                    elif int(resposta) == 2:                        #se o int(resposta) for igual a '2' então imprima
-                        print('1.2.2')
-                    elif int(resposta) == 3:                        #se o int(resposta) for igual a '3' então imprima
-                        print('1.2.3')
-
-            elif resposta == '3':                                   #se 'resposta' for igual a '1' então
-                while True:                                         #loop repita sempre
-                    print('[ 1 ] 1.3\n'
-                          '[ 2 ] 1.3\n'
-                          '[ 3 ] 1.3\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]       #Atribui um valor a 'resposta'
-                    if resposta == '4':                             #Enterrompe o loop se 'resposta' for igual a 4
-                        resposta = ''                               #Limpra a vareavel pra não interferir quando volta pro loop, linha: 14
-                        break
-                    if resposta not in '1234':                      #se 'resposta' não estiver dentro de '1234' então imprima ERRO
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:                          #se o int(resposta) for igual a '1' então imprima
-                        print('1.3.1')
-                    elif int(resposta) == 2:                        #se o int(resposta) for igual a '2' então imprima
-                        print('1.3.2')
-                    elif int(resposta) == 3:                        #se o int(resposta) for igual a '3' então imprima                      
-                        print('1.3.3')
+            if int(pergunta) == 1:                          
+                print('Link de acesso do Qualified é: https://codewars.coom')
+            elif int(pergunta) == 2:                        
+                print('Assunto 1, pergunta 2')
+            elif int(pergunta) == 3:                       
+                print('Assunto 1, pergunta 2') 
     
-    elif resposta == '2':
+    elif assunto == '2':
         while True:
-            print('[ 1 ] 2\n'
-                  '[ 2 ] 2\n'
-                  '[ 3 ] 2\n'
-                  '[ 4 ] Sair')
-
-            resposta = input('Digite um número: ')[0]
-            if resposta == '4':
-                resposta = ''
+            print('[ 1 ] Assunto 2, pergunta 1\n'
+                  '[ 2 ] Assunto 2, pergunta 2\n'
+                  '[ 3 ] Assunto 2, pergunta 3\n'
+                  '[ 4 ] Retornar ao início')
+            
+            pergunta = input('Digite um número: ')[0]
+            if pergunta == '4':
+                pergunta = ''
                 break
-            if resposta not in '1234':
+            if pergunta not in '1234':
                 print('ERRO! Número invalido, tente novamente!')
 
-            if resposta == '1':
-                while True:
-                    print('[ 1 ] 2.1\n'
-                          '[ 2 ] 2.1\n'
-                          '[ 3] 2.1\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('2.1.1')
-                    elif int(resposta) == 2:
-                        print('2.1.2')
-                    elif int(resposta) == 3:
-                        print('2.1.3')
-
-            if resposta == '2':
-                while True:
-                    print('[ 1 ] 2.2\n'
-                          '[ 2 ] 2.2\n'
-                          '[ 3 ] 2.2\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('2.2.1')
-                    elif int(resposta) == 2:
-                        print('2.2.2')
-                    elif int(resposta) == 3:
-                        print('2.2.3')
-
-            if resposta == '3':
-                while True:
-                    print('[ 1 ] 2.3\n'
-                          '[ 2 ] 2.3\n'
-                          '[ 3 ] 2.3\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('2.3.1')
-                    elif int(resposta) == 2:
-                        print('2.3.2')
-                    elif int(resposta) == 3:
-                        print('2.3.3')
+            if int(pergunta) == 1:
+                print('Resposta: Assunto 2, pergunta 1')
+            elif int(pergunta) == 2:
+                print('Resposta: Assunto 2, pergunta 2')
+            elif int(pergunta) == 3:
+                print('Resposta: Assunto 2, pergunta 3')
                     
-    elif resposta == '3':
+    elif assunto == '3':
         while True:
-            print('[ 1 ] 3\n'
-                  '[ 2 ] 3\n'
-                  '[ 3 ] 3\n'
-                  '[ 4 ] Sair')
+            print('[ 1 ] Assunto 3, pergunta 1\n'
+                  '[ 2 ] Assunto 3, pergunta 1\n'
+                  '[ 3 ] Assunto 3, pergunta 1\n'
+                  '[ 4 ] Retornar ao início')
 
-            resposta = input('Digite um número: ')[0]
-            if resposta == '4':
-                resposta = ''
+            pergunta = input('Digite um número: ')[0]
+            if pergunta == '4':
+                pergunta = ''
                 break
-            if resposta not in '1234':
+            if pergunta not in '1234':
                 print('ERRO! Número invalido, tente novamente!')
 
-            if resposta == '1':
-                while True:
-                    print('[ 1 ] 3.1\n'
-                          '[ 2 ] 3.1\n'
-                          '[ 3 ] 3.1\n'
-                          '[ 4 ] Sair')
 
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('3.1.1')
-                    elif int(resposta) == 2:
-                        print('3.1.2')
-                    elif int(resposta) == 3:
-                        print('3.1.3')
-
-            if resposta == '2':
-                while True:
-                    print('[ 1 ] 3.2\n'
-                          '[ 2 ] 3.2\n'
-                          '[ 3 ] 3.2\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('3.2.1')
-                    elif int(resposta) == 2:
-                        print('3.2.2')
-                    elif int(resposta) == 3:
-                        print('3.2.3')
-
-            if resposta == '3':
-                while True:
-                    print('[ 1 ] 3.3\n'
-                          '[ 2 ] 3.3\n'
-                          '[ 3 ] 3.3\n'
-                          '[ 4 ] Sair')
-
-                    resposta = input('Digite um número: ')[0]
-                    if resposta == '4':
-                        resposta = ''
-                        break
-                    if resposta not in '1234':
-                        print('ERRO! Número invalido, tente novamente!')
-
-                    if int(resposta) == 1:
-                        print('3.3.1')
-                    elif int(resposta) == 2:
-                        print('3.3.2')
-                    elif int(resposta) == 3:
-                        print('3.3.3')
+            if int(pergunta) == 1:
+                print('Resposta: Assunto 3, pergunta 1')
+            elif int(pergunta) == 2:
+                print('Resposta: Assunto 3, pergunta 2')
+            elif int(pergunta) == 3:
+                print('Resposta: Assunto 3, pergunta 3')
                     
-print('Obrigado, volte sempre!!!')
+print('Obrigado, volte sempre!!!')
